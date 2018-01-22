@@ -1,0 +1,94 @@
+!##############################################################################
+! rofi configuration
+
+! Color scheme for normal row
+rofi.color-normal:                  argb:00383c4a, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
+
+! Color scheme for urgent row
+rofi.color-urgent:                  argb:002d303b, #cc6666, argb:e52d303b, #a54242, #f9f9f9
+
+! Color scheme for active row
+rofi.color-active:                  argb:002d303b, #b5bd68, argb:e42d303b, #8c9440, #f9f9f9
+
+! Color scheme window
+rofi.color-window:                  argb:f22d303b, #7c8389, #1d1f21
+
+! Separator style (none, dash, solid)
+rofi.separator-style:               none
+
+! Hide scroll-bar
+rofi.hide-scrollbar:                true
+
+! Set fullscreen
+rofi.fullscreen:                    true
+! Set number of lines
+rofi.lines:                         3
+
+! Set element height
+rofi.eh:                            2
+
+! Define inner margin of window (padding)
+rofi.padding:                       300
+
+! Set font
+rofi.font:                          Operator Mono Regular 13
+
+! Set border width in pixels
+rofi.bw:                            0
+
+! Center the menu
+rofi.location:                      0
+
+!##############################################################################
+! urxvt configuration
+
+! Set font
+URxvt.font:                         xft:operator\ mono:size=9
+
+! Set font spacing (by number of pixels)
+URxvt.letterSpace:                  0
+
+! Disable scroll bar
+URxvt.scrollBar:                    false
+
+! Set set key binding for keyboard scrolling
+URxvt.keysym.Control-k: command:\033]720;1\007
+URxvt.keysym.Control-j: command:\033]721;1\007
+
+! Send up arrow escape sequence
+URxvt.keysym.Control-h: \033[A
+
+! Send down arrow escape sequence
+URxvt.keysym.Control-l: \033[B
+
+! Black
+URxvt*color0:           #262626
+URxvt*color8:           #252525
+
+! Red
+URxvt*color1:           #C12121
+URxvt*color9:           #E50E0E
+
+! Green
+URxvt*color2:           #597b20
+URxvt*color10:          #89b83f
+
+! Yellow
+URxvt*color3:           #Ded838
+URxvt*color11:          #efef60
+
+! Blue
+URxvt*color4:           #265997
+URxvt*color12:          #3F6FD0
+
+! Magenta
+URxvt*color5:           #706c9a
+URxvt*color13:          #826ab1
+
+! Cyan
+URxvt*color6:           #69a2b0
+URxvt*color14:          #a1cdcd
+
+! White
+URxvt*color7:           #BBBBBB
+URxvt*color15:          #EEEEEF! colors

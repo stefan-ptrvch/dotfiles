@@ -1,0 +1,5 @@
+Command to start a process with given process name:
+    exec -a process_name <command> &
+
+Command to stop a process with given process name:
+    pkill -f process_name

@@ -1,16 +1,3 @@
-rename GE_AreaS2all_building629.kmz
-search 0ph7
-search 180ph7
-search netw
-search neural
-mkdir trained_on_all_targets
-open_with l
-rename 0klx_comparison
-rename 0klx
-rename timings_and_profiles
-e cestitike
-mkdir x86
-mkdir stm32
 rename ARM-M7
 rename C
 rename C_without_lib
@@ -32,8 +19,6 @@ search rofi
 search xd
 search des
 edit notes
-
-delete 
 search mu
 search mus
 te
@@ -41,10 +26,25 @@ rename aurix_tc27x_user_manual.pdf
 rename aurix_tc27xD_user_manual.pdf
 rename aurix_tc27x-D_user_manual.pdf
 search pic
-edit .
 rename NIC_WTSH_1705P1_STPE_20171230.xlsx
-search down
 search dow
-edit .gitignore
-search h
+j
+e asd
+search usr
+search inc
+search python3.6m
+q
+term
+search down
+open_with vim
+delete 
+edit .
+rename C_with_gsl
+rename iris_model_python
+search 
+search xre
+shell 
+
 terminal 
+search config
+search ranger
