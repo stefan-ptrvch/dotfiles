@@ -4,7 +4,7 @@ vim (ima u repo)
 .bashrc
 xf86-video-intel (from AUR)
 chromium (ima u antergos)
-anaconda (mora manual download)
+anaconda (mora manual download) << DOVUCI RUCNO
 i3-wm (ima u repo)
 i3blocks (ima u repo)
 i3lock (ima u repo)
@@ -44,6 +44,7 @@ qtscrobbler
 picard
 skypeforlinux
 thunar
+dtrx
 
 For x220:
 tpacpi-bat (u AUR)
