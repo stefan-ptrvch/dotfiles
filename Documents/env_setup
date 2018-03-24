@@ -11,6 +11,7 @@ i3lock (ima u repo)
 .config/i3/config
 .config/i3/i3blocks.conf
 rofi (ima u repo)
+conky
 .Xresources (mozda prebaciti rofi config u i3 config)
 viber (ima u AUR)
 arandr (ima u repo)
@@ -45,10 +46,3 @@ picard
 skypeforlinux
 thunar
 dtrx
-
-For x220:
-tpacpi-bat (u AUR)
-
-Misc:
-Obrisati symlink sa libncurses.so.5 na libncurses.so.6 kada ti ne bude trebao
-vise matlab

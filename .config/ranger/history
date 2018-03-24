@@ -1,4 +1,3 @@
-open_with vim
 rename FTD2XX_SPI_libMPSSE.m
 mkdir leg_stuff
 e
@@ -48,3 +47,4 @@ search local
 search fonts
 search sotf
 search sof
+search anter
