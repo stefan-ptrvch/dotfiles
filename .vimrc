@@ -311,3 +311,4 @@
     " CTRL-P
         " A fuzzy file finder
         let g:ctrlp_working_path_mode = 0
+        let g:ctrlp_show_hidden = 1
