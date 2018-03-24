@@ -1,50 +1,50 @@
-rename ARM-M7
-rename C
-rename C_without_lib
-edit 
-de
-rename line_profiler
-rename image_info.h
-rename line_profiler.h
-rename pre_processing.h
-rename util.h
-rename line_profiler.c
-rename pre_processing.c
-rename util.c
-rename main.c
-search musi
-rename 1705_P1_Report.pdf
-search confi
-search rofi
-search xd
-search des
-edit notes
-search mu
-search mus
-te
-rename aurix_tc27x_user_manual.pdf
-rename aurix_tc27xD_user_manual.pdf
-rename aurix_tc27x-D_user_manual.pdf
-search pic
-rename NIC_WTSH_1705P1_STPE_20171230.xlsx
-search dow
-j
-e asd
-search usr
-search inc
-search python3.6m
-q
-term
-search down
+search docu
+e meltdown.c
+mkdir functions
+mkdir bin
+ed
+rename spi_test_script.m
 open_with vim
-delete 
-edit .
-rename C_with_gsl
-rename iris_model_python
+rename FTD2XX_SPI_libMPSSE.m
+mkdir leg_stuff
+e
+d
+de
+rename line_profiler_firmware
+search .git
+search ssh
+rename ssh
+search gitco
+mkdir test
+mkdir 15_Digitalkamera_L246
+rename .tmux.conf
+search .tmux
+search i3bar
+search i3
+rename line_profiler_firmware_
+rename line_profiler_firmware_one_phase
+rename line_profiler_firmware_two_phase
+rename camera_test_proposals.pdf
+rename Documentation
+rename Documents
+search dow
+search dowb
+mkdir Games
 search 
-search xre
-shell 
+search config
+search bashrc
+search aph
+search mus
+mkdir Codereview
+touch notes
+open_with 
+edit 
+search down
 
 terminal 
-search config
-search ranger
+default_linemode 
+rename crawler
+mkdir throwaway
+edit .
+del
+delete 

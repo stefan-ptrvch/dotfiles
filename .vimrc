@@ -55,8 +55,8 @@
         " Using << and >> shifts four spaces
         set shiftwidth=4
 
-        " Text gets wrapped at column 80
-        set textwidth=80
+        " Text gets wrapped at column 79
+        set textwidth=79
 
         " Tab press will produce spaces instead of tab character
         set expandtab
@@ -101,7 +101,7 @@
             let foldtextstart = strpart('+' . repeat('-', v:foldlevel*2) . line, 0, (winwidth(0)*2)/3)
             let foldtextend = lines_count_text . repeat(foldchar, 8)
             let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
-            return foldtextstart . repeat('-', 80 - foldtextlength) . foldtextend
+            return foldtextstart . repeat('-', 79 - foldtextlength) . foldtextend
         endfunction
 
         " Set function for generating folding string
@@ -110,8 +110,8 @@
     " Color Settings
         " Interface colors and highlighting
 
-        " Add different color past column 80 to indicate line break overstepping
-        let &colorcolumn=join(range(81,999),",")
+        " Add different color past column 79 to indicate line break overstepping
+        let &colorcolumn=join(range(80,999),",")
 
         " Enable 24-bit color
         set termguicolors
@@ -233,6 +233,9 @@
     " Show git diff in gutter
     Plugin 'airblade/vim-gitgutter'
 
+    " Surround text with stuff
+    Plugin 'tpope/vim-surround'
+
     " All of your Plugins must be added before the following line
     call vundle#end()
 
@@ -266,14 +269,24 @@
         set statusline+=%{SyntasticStatuslineFlag()}
         set statusline+=%*
 
+        " Something probably having to do with the pop-up window
         let g:syntastic_always_populate_loc_list = 1
         let g:syntastic_auto_loc_list = 1
+
+        " Check file on open
         let g:syntastic_check_on_open = 1
+
+        " Check on closing file (not sure how and why)
         let g:syntastic_check_on_wq = 0
+
+        " Enable displaying errors from all linters at once
+        let g:syntastic_aggregate_errors = 1
+
+        " Set Python linter
+        autocmd Filetype python let g:syntastic_python_checkers = ['pylint', 'flake8']
 
         " Shortcut for closing error window
         map <leader>w :SyntasticReset<CR>
-
 
     " NERDCommenter
             " A plugin for toggling comments

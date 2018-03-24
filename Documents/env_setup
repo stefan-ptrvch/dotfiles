@@ -1,0 +1,53 @@
+antergos gnome
+vim (ima u repo)
+.vimrc
+.bashrc
+xf86-video-intel (from AUR)
+chromium (ima u antergos)
+anaconda (mora manual download)
+i3-wm (ima u repo)
+i3blocks (ima u repo)
+i3lock (ima u repo)
+.config/i3/config
+.config/i3/i3blocks.conf
+rofi (ima u repo)
+.Xresources (mozda prebaciti rofi config u i3 config)
+viber (ima u AUR)
+arandr (ima u repo)
+feh (ima u repo)
+fontawesome (github)
+redshift (ima u repo)
+lxappearence (ima u repo)
+.gtkrc-2.0 (for lxappearence)
+.config/gtk-3.0/settings.ini (for lxappearence)
+arc-gtk-theme (ima u repo)
+arc-icon-theme (ima u repo)
+compton (ima u repo)
+acpi (ima u repo)
+gnome-terminal
+~/.config/termite/config
+remove xfce4-terminal
+gramps (ima u repo)
+InconsolataGo
+~/.bashrc
+ranger
+polybar
+fzf
+ncmpcpp
+mpd
+mpdscribble
+adobe-source-han-sans-cn-fonts
+adobe-source-han-sans-jp-fonts
+adobe-source-han-sans-kr-fonts
+siji form aur
+qtscrobbler
+picard
+skypeforlinux
+thunar
+
+For x220:
+tpacpi-bat (u AUR)
+
+Misc:
+Obrisati symlink sa libncurses.so.5 na libncurses.so.6 kada ti ne bude trebao
+vise matlab
