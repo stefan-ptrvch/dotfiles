@@ -4,6 +4,7 @@
 # sudo pacman-key --refresh-keys
 
 # Needs to be done manually:
+#   -call :PluginInstall in vim
 #   -set lxappearance fonts and themes
 #   -compile YCM with ./install.py --clang-completer --system-libclang
 #   -Anaconda3
@@ -41,6 +42,8 @@ sudo pacman -S --noconfirm thunar >> setup.log
 sudo pacman -S --noconfirm clang >> setup.log
 sudo pacman -S --noconfirm cmake >> setup.log
 sudo pacman -S --noconfirm conky >> setup.log
+sudo pacman -S --noconfirm vagrant >> setup.log
+sudo pacman -S --noconfirm virtualbox >> setup.log
 
 # Enable moving dotfiles
 shopt -s dotglob
