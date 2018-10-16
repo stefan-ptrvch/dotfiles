@@ -256,7 +256,7 @@
         let g:ycm_autoclose_preview_window_after_completion=1
 
         " Set interpreter to python2 interpreter
-        let g:ycm_server_python_interpreter="/usr/bin/python2.7"
+        " let g:ycm_server_python_interpreter="/usr/bin/python2.7"
 
         " Tell YCM where the global flag file is for C languages
         " let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
