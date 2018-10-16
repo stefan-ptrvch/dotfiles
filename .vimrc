@@ -236,6 +236,9 @@
     " Surround text with stuff
     Plugin 'tpope/vim-surround'
 
+    " Typescript syntax highligting
+    Plugin 'leafgarland/typescript-vim'
+
     " All of your Plugins must be added before the following line
     call vundle#end()
 
