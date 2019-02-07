@@ -85,6 +85,9 @@
         " Turn on filetype detection
         filetype on
 
+        " Turn off Vi compatibility
+        set nocompatible
+
         " Turn on plugin loading for corresponding filetypes
         filetype plugin on
 
@@ -189,6 +192,23 @@
         " Assembly Specific Settings
         autocmd BufRead,BufNewFile *.asm set filetype=nasm
 
+    " Vue
+        " Vue Specific Settings
+        autocmd Filetype vue,html,css,javascript call Set_Vue_options()
+
+        function! Set_Vue_options()
+
+            " Tab character is 2 spaces wide
+            set tabstop=2
+
+            " Tab key indents 2 spaces
+            set softtabstop=2
+
+            " Using << and >> shifts four spaces
+            set shiftwidth=2
+
+        endfunction
+
 
 " PLUGINS
     " Use Vundle to install different plugins
@@ -207,7 +227,7 @@
     " All plugins go below
 
     " Autocomplete engine
-    Plugin 'Valloric/YouCompleteMe'
+    " Plugin 'Valloric/YouCompleteMe'
 
     " Plugin for syntax checking
     Plugin 'scrooloose/syntastic'
@@ -238,6 +258,18 @@
 
     " Typescript syntax highligting
     Plugin 'leafgarland/typescript-vim'
+
+    " Supercollider plugin
+    Plugin 'supercollider/scvim'
+
+    " Vimwiki
+    Plugin 'vimwiki/vimwiki'
+
+    " Vue.js
+    Plugin 'posva/vim-vue'
+
+    " HTML
+    Plugin 'mattn/emmet-vim'
 
     " All of your Plugins must be added before the following line
     call vundle#end()
@@ -314,4 +346,18 @@
     " CTRL-P
         " A fuzzy file finder
         let g:ctrlp_working_path_mode = 0
-        let g:ctrlp_show_hidden = 1
+        " let g:ctrlp_show_hidden = 1
+
+        " Run in buffer mode by default
+        let g:ctrlp_cmd = 'CtrlPBuffer'
+
+    " SCvim
+
+        " Set terminal to gnome terminal
+        let g:sclangTerm = "gnome-terminal -x $SHELL -ic"
+
+    " Vimwiki
+
+        " Set Markdown syntax highlighting as default
+        let g:vimwiki_list = [{'path': '~/vimwiki/',
+                   \ 'syntax': 'markdown', 'ext': '.md'}]

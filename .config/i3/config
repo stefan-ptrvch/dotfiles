@@ -13,7 +13,7 @@ set $mod Mod4
 set $mod2 Control
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:InconsolataGo Bold 11
+font pango:Inconsolata Bold 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -61,7 +61,7 @@ bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
     # Hide tray icons
-    tray_output none
+    # tray_output none
 
     # Set bar colorscheme
     colors {
@@ -232,30 +232,30 @@ bindsym $mod+m focus floating; mode "Move"
 
 ###############################################################################
 #Configure gaps
-gaps inner 17
-gaps outer 0
-smart_gaps on
+# gaps inner 17
+# gaps outer 0
+# smart_gaps on
 
 ###############################################################################
 # x220 configuration
 
 # Stuff for volume buttons, audio mute, and mic mute
-# bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-# bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-# bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-# bindsym XF86AudioMicMute exec "pactl set-source-mute 1 toggle"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMicMute exec "pactl set-source-mute 1 toggle"
 
 # Disable touchpad
-# exec_always xinput set-prop 11 "Device Enabled" 0
+exec_always xinput set-prop 11 "Device Enabled" 0
 
 ###############################################################################
 # Autostart programs
 
 exec chromium
 exec viber
-exec redshift
+exec_always redshift -l 44:20
 exec --no-startup-id nm-applet
-exec skypeforlinux
+# exec skypeforlinux
 # exec_always compton
 exec_always mpd
 exec_always "mpdscribble --conf ~/.config/mpdscribble/mpdscribble.conf \
@@ -277,7 +277,7 @@ bindsym $mod+shift+x exec /home/stefan/.config/i3/i3lock.sh
 bindsym $mod+Shift+BackSpace exec systemctl reboot
 
 # Power off computer
-bindsym $mod+Escape exec systemctl poweroff
+bindsym $mod+shift+Escape exec systemctl poweroff
 
 # Relaod .Xresources
 bindsym $mod+Shift+q exec xrdb ~/.Xresources
@@ -297,8 +297,17 @@ bindsym $mod+bracketright exec pactl set-sink-volume 0 +5%
 # Decrease volume by 5%
 bindsym $mod+bracketleft exec pactl set-sink-volume 0 -5%
 
-# Start ncmpcpp
+# Start ncmpcpp, controlling local mpd
 bindsym $mod+n exec i3-sensible-terminal -e ncmpcpp
+
+# Start ncmpcpp, controlling remote mpd
+bindsym $mod+shift+n exec i3-sensible-terminal -e "ncmpcpp --host=165.227.148.86 --port=6600"
+
+# Start mpd, listening to remote streaming server
+bindsym $mod+shift+p exec "mpc clear && mpc add http://165.227.148.86:8000 && mpc play"
+
+# Stop mpd
+bindsym $mod+shift+s exec "mpc stop"
 
 ###############################################################################
 # Misc
