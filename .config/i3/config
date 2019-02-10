@@ -317,7 +317,7 @@ bindsym $mod+shift+s exec "mpc stop"
 exec xset -b
 
 # Set wallpaper
-exec_always feh --bg-scale /home/stefan/Pictures/Wallpapers/beauty-pic.jpg
+exec_always feh --bg-scale /home/stefan/Pictures/asdfg.jph #don't exist
 
 # Set key repeat rate and delay
 exec_always xset r rate 150 20
