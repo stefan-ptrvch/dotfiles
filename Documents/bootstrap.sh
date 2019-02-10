@@ -17,10 +17,10 @@
 #   -qtscrobbler (have no idea how I installed it)
 
 # Software
-#sudo pacman -S --noconfirm gvim >> setup.log
+sudo pacman -S --noconfirm neovim >> setup.log
+# Clipboard tool for Neovim
+sudo pacman -S --noconfirm xsel >> setup.log
 sudo pacman -S --noconfirm git >> setup.log
-#sudo pacman -S --noconfirm mesa >> setup.log
-#sudo pacman -S --noconfirm chromium >> setup.log
 sudo pacman -S --noconfirm i3-gaps >> setup.log
 sudo pacman -S --noconfirm i3lock >> setup.log
 sudo pacman -S --noconfirm i3blocks >> setup.log
@@ -40,17 +40,21 @@ sudo pacman -S --noconfirm fzf >> setup.log
 sudo pacman -S --noconfirm ncmpcpp >> setup.log
 sudo pacman -S --noconfirm mpd >> setup.log
 sudo pacman -S --noconfirm mpc >> setup.log
-sudo pacman -S --noconfirm dolphin >> setup.log
-#sudo pacman -S --noconfirm clang >> setup.log
-sudo pacman -S --noconfirm cmake >> setup.log
+sudo pacman -S --noconfirm thunar >> setup.log
 sudo pacman -S --noconfirm conky >> setup.log
-#sudo pacman -S --noconfirm vagrant >> setup.log
-#sudo pacman -S --noconfirm virtualbox >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-cn-fonts >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-jp-fonts >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-kr-fonts >> setup.log
 sudo pacman -S --noconfirm texlive-most >> setup.log
 sudo pacman -S --noconfirm acpi >> setup.log
+sudo pacman -S --noconfirm gconf >> setup.log
+sudo pacman -S --noconfirm ttf-font-awesome >> setup.log
+sudo pacman -S --noconfirm emacs >> setup.log
+sudo pacman -S --noconfirm dropbox >> setup.log
+
+
+# Download Spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Enable moving dotfiles
 shopt -s dotglob
@@ -68,4 +72,4 @@ rm -rf dotfiles
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # One Dark for gnome-terminal
-#wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && . one-dark.sh
+wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && . one-dark.sh
