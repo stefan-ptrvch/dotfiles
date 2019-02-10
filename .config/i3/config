@@ -256,7 +256,7 @@ exec viber
 exec_always redshift -l 44:20
 exec --no-startup-id nm-applet
 # exec skypeforlinux
-# exec_always compton
+exec_always compton
 exec_always mpd
 exec_always "mpdscribble --conf ~/.config/mpdscribble/mpdscribble.conf \
                          --log ~/.config/mpdscribble/mpdscribble.log"
@@ -286,7 +286,7 @@ bindsym $mod+Shift+q exec xrdb ~/.Xresources
 bindsym --release Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/Pictures/'
 
 # Start ranger
-bindsym $mod+u exec i3-sensible-terminal -e ranger
+bindsym $mod+u exec gnome-terminal -e ranger
 
 # Start Thunar
 bindsym $mod+t exec thunar
