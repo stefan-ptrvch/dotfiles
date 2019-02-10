@@ -163,7 +163,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9 workspace $workspac
 bindsym $mod+Shift+0 move container to workspace $workspace10 workspace $workspace10
 
 # Force programs to open on appropriate workspaces
-assign [class="Chromium"] $workspace1
+assign [class="Firefox"] $workspace1
 assign [class="ViberPC"] $workspace10
 assign [class="Skype"] $workspace10
 
@@ -251,9 +251,9 @@ exec_always xinput set-prop 11 "Device Enabled" 0
 ###############################################################################
 # Autostart programs
 
-exec chromium
+exec firefox
 exec viber
-exec_always redshift -l 44:20
+# exec_always redshift -l 44:20
 exec --no-startup-id nm-applet
 # exec skypeforlinux
 exec_always compton
@@ -261,14 +261,15 @@ exec_always mpd
 exec_always "mpdscribble --conf ~/.config/mpdscribble/mpdscribble.conf \
                          --log ~/.config/mpdscribble/mpdscribble.log"
 # exec_always --no-startup-id ~/.config/polybar/polybar.sh
+exec_always dropbox
 ###############################################################################
 # Custom keybindings
 
 # Open i3 config
-bindsym $mod+z exec i3-sensible-terminal -e "vim /home/stefan/.config/i3/config"
+bindsym $mod+z exec i3-sensible-terminal -e "nvim /home/stefan/.config/i3/config"
 
 # Open vimrc
-bindsym $mod+shift+z exec i3-sensible-terminal -e "vim /home/stefan/.vimrc"
+bindsym $mod+shift+z exec i3-sensible-terminal -e "nvim /home/stefan/.vimrc"
 
 # i3lock shortcut
 bindsym $mod+shift+x exec /home/stefan/.config/i3/i3lock.sh

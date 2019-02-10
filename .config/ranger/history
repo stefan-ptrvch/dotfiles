@@ -33,7 +33,6 @@ touch notes
 open_with 
 edit 
 search down
-
 default_linemode 
 rename crawler
 mkdir throwaway
@@ -41,10 +40,11 @@ edit .
 del
 delete 
 search docu
-terminal 
 search font
 search local
 search fonts
 search sotf
 search sof
 search anter
+terminal 
+

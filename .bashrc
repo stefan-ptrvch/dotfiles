@@ -24,11 +24,11 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\[\e[m\]\[\e[1;32
 
 # X Terminal titles
 case "$TERM" in
-xterm*|rxvt*)
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-;;
-*)
-;;
+    xterm*|rxvt*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+        ;;
+    *)
+        ;;
 esac
 
 alias ls='ls -la --color=auto'
