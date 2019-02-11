@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm lxappearance >> setup.log
 sudo pacman -S --noconfirm arc-gtk-theme >> setup.log
 sudo pacman -S --noconfirm arc-icon-theme >> setup.log
 sudo pacman -S --noconfirm compton >> setup.log
-sudo pacman -S --noconfirm gnome-terminal >> setup.log
+sudo pacman -S --noconfirm termite >> setup.log
 sudo pacman -S --noconfirm gramps >> setup.log
 sudo pacman -S --noconfirm ranger >> setup.log
 sudo pacman -S --noconfirm fzf >> setup.log
@@ -45,10 +45,10 @@ sudo pacman -S --noconfirm conky >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-cn-fonts >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-jp-fonts >> setup.log
 sudo pacman -S --noconfirm adobe-source-han-sans-kr-fonts >> setup.log
+sudo pacman -S --noconfirm ttf-font-awesome >> setup.log
+sudo pacman -S --noconfirm ttf-dejavu >> setup.log
 sudo pacman -S --noconfirm texlive-most >> setup.log
 sudo pacman -S --noconfirm acpi >> setup.log
-sudo pacman -S --noconfirm gconf >> setup.log
-sudo pacman -S --noconfirm ttf-font-awesome >> setup.log
 sudo pacman -S --noconfirm emacs >> setup.log
 sudo pacman -S --noconfirm dropbox >> setup.log
 
@@ -70,6 +70,3 @@ rm -rf dotfiles
 
 # Get vundle (on vm, got clones into /root)
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# One Dark for gnome-terminal
-wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && . one-dark.sh
