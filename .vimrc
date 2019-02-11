@@ -130,7 +130,7 @@
     " Custom mappings for general Vim functionality
 
     " Go into shell
-    map <leader>s :sh<CR>
+    map <leader>s :terminal<CR>
 
     " Clear search highlights
     map <leader>n :noh<CR>
@@ -160,6 +160,9 @@
     nnoremap <C-K> <C-W><C-K>
     nnoremap <C-L> <C-W><C-L>
     nnoremap <C-H> <C-W><C-H>
+
+    " Exit terminal mode
+    tnoremap jj <C-\><C-n>
 
 
 " LANGUAGE SPECIFIC SETTINGS
