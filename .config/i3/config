@@ -75,7 +75,7 @@ bar {
 }
 
 # Start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -e "nvim -c 'terminal'"
+bindsym $mod+Return exec i3-sensible-terminal
 
 # Kill focused window
 bindsym $mod+q kill
@@ -338,3 +338,7 @@ bindsym $mod+$mod2+y exec python ~/.scripts/pitch_trainer/pitch_trainer.py Y
 
 # Pitch testing
 bindsym $mod+$mod2+p exec python ~/.scripts/pitch_trainer/pitch_test.py
+
+# Control backlight
+bindsym $mod+Home exec xbacklight -inc 10
+bindsym $mod+End exec xbacklight -dec 10
