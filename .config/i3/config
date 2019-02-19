@@ -340,5 +340,5 @@ bindsym $mod+$mod2+y exec python ~/.scripts/pitch_trainer/pitch_trainer.py Y
 bindsym $mod+$mod2+p exec python ~/.scripts/pitch_trainer/pitch_test.py
 
 # Control backlight
-bindsym $mod+Home exec xbacklight -inc 10
-bindsym $mod+End exec xbacklight -dec 10
+bindsym $mod+Home exec xbacklight -inc 1
+bindsym $mod+End exec xbacklight -dec 1

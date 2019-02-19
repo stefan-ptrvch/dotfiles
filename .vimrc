@@ -210,6 +210,9 @@
             " Using << and >> shifts four spaces
             set shiftwidth=2
 
+            " Fix syntax highlighting crapping out
+            autocmd BufEnter * :syntax sync fromstart
+
         endfunction
 
 
@@ -355,12 +358,10 @@
         let g:ctrlp_cmd = 'CtrlPBuffer'
 
     " SCvim
-
         " Set terminal to gnome terminal
         let g:sclangTerm = "gnome-terminal -x $SHELL -ic"
 
     " Vimwiki
-
         " Set Markdown syntax highlighting as default
         let g:vimwiki_list = [{'path': '~/vimwiki/',
                    \ 'syntax': 'markdown', 'ext': '.md'}]
