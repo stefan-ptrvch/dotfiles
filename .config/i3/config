@@ -253,7 +253,7 @@ exec_always xinput set-prop 11 "Device Enabled" 0
 
 exec firefox
 exec viber
-# exec_always redshift -l 44:20
+exec_always redshift -l 44:20
 exec --no-startup-id nm-applet
 # exec skypeforlinux
 exec_always compton
