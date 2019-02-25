@@ -51,6 +51,7 @@ sudo pacman -S --noconfirm texlive-most >> setup.log
 sudo pacman -S --noconfirm acpi >> setup.log
 sudo pacman -S --noconfirm emacs >> setup.log
 sudo pacman -S --noconfirm dropbox >> setup.log
+sudo pacman -S --noconfirm noto-fonts >> setup.log
 
 
 # Download Spacemacs
