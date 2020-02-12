@@ -177,7 +177,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Resize window (you can also use the mouse for that)
-mode "Resize" {
+mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
 
     # Pressing left will shrink the window’s width.
@@ -190,21 +190,21 @@ mode "Resize" {
     bindsym l resize grow width 10 px or 10 ppt
 
     # Back to normal: Enter or Escape
-    bindsym Return mode "Default"
-    bindsym Escape mode "Default"
-    bindsym $mod+r mode "Default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 
     # Go to move mode
-    bindsym $mod+m mode "Move"
+    bindsym $mod+m mode "move"
 }
 
-bindsym $mod+r mode "Resize"
+bindsym $mod+r mode "resize"
 
 ###############################################################################
 # Define custom modes
 
 # Move windows in floating mode
-mode "Move" {
+mode "move" {
 
     # Move left by 20 pixels
     bindsym h move left 20px
@@ -219,22 +219,22 @@ mode "Move" {
     bindsym l move right 20px
 
     # Return to normal mode
-    bindsym Return mode "Default"
-    bindsym Escape mode "Default"
-    bindsym $mod+m mode "Default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
 
     # Go to resize mode
-    bindsym $mod+r mode "Resize"
+    bindsym $mod+r mode "resize"
 }
 
 # Go into move mode
-bindsym $mod+m focus floating; mode "Move"
+bindsym $mod+m focus floating; mode "move"
 
 ###############################################################################
 #Configure gaps
-# gaps inner 17
-# gaps outer 0
-# smart_gaps on
+gaps inner 17
+gaps outer 0
+smart_gaps on
 
 ###############################################################################
 # x220 configuration
@@ -253,15 +253,15 @@ exec_always xinput set-prop 11 "Device Enabled" 0
 
 exec firefox
 exec viber
-exec_always redshift -l 44:20
+exec redshift -l 44:20
 exec --no-startup-id nm-applet
 # exec skypeforlinux
-exec_always compton
-exec_always mpd
-exec_always "mpdscribble --conf ~/.config/mpdscribble/mpdscribble.conf \
-                         --log ~/.config/mpdscribble/mpdscribble.log"
+# exec_always compton
+exec mpd
+exec "mpdscribble --conf ~/.config/mpdscribble/mpdscribble.conf \
+         --log ~/.config/mpdscribble/mpdscribble.log"
 # exec_always --no-startup-id ~/.config/polybar/polybar.sh
-exec_always dropbox
+exec dropbox
 ###############################################################################
 # Custom keybindings
 
@@ -301,14 +301,10 @@ bindsym $mod+bracketleft exec pactl set-sink-volume 0 -5%
 # Start ncmpcpp, controlling local mpd
 bindsym $mod+n exec i3-sensible-terminal -e ncmpcpp
 
-# Start ncmpcpp, controlling remote mpd
-bindsym $mod+shift+n exec i3-sensible-terminal -e "ncmpcpp --host=165.227.148.86 --port=6600"
-
-# Start mpd, listening to remote streaming server
-bindsym $mod+shift+p exec "mpc clear && mpc add http://165.227.148.86:8000 && mpc play"
-
-# Stop mpd
-bindsym $mod+shift+s exec "mpc stop"
+# Change keyboard layout
+bindsym $mod+shift+s exec "setxkbmap bs"
+bindsym $mod+shift+u exec "setxkbmap us"
+bindsym $mod+shift+d exec "setxkbmap de"
 
 ###############################################################################
 # Misc
@@ -317,7 +313,7 @@ bindsym $mod+shift+s exec "mpc stop"
 exec xset -b
 
 # Set wallpaper
-exec_always feh --bg-scale /home/stefan/Pictures/asdfg.jph #don't exist
+exec_always feh --bg-max ~/Documents/rudo_2560x1440.jpg
 
 # Set key repeat rate and delay
 exec_always xset r rate 150 20
@@ -342,3 +338,10 @@ bindsym $mod+$mod2+p exec python ~/.scripts/pitch_trainer/pitch_test.py
 # Control backlight
 bindsym $mod+Home exec xbacklight -inc 1
 bindsym $mod+End exec xbacklight -dec 1
+
+# Disable mouse focus
+focus_follows_mouse no
+
+# Disable browser forward/back keyboard keys
+exec_always xmodmap -e "keycode 166="
+exec_always xmodmap -e "keycode 167="

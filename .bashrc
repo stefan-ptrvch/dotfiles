@@ -52,3 +52,6 @@ unset __conda_setup
 # <<< conda init <<<
 
 export TERM=xterm-256color
+
+# For global yarn modules
+export PATH="/home/stefan/.yarn/bin:$PATH"

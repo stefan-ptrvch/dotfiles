@@ -125,6 +125,17 @@
         " Remove trailing whitespace on file save
         autocmd BufWritePre * %s/\s\+$//e
 
+        " Persistent undo
+        set undofile
+        set undodir=$HOME/.vim/undo
+
+        set undolevels=1000
+        set undoreload=10000
+
+        " Tabs movement
+        map <A-h> :tabp<cr>
+        map <A-l> :tabn<cr>
+
 
 " CUSTOM MAPPINGS
     " Custom mappings for general Vim functionality
@@ -232,11 +243,17 @@
 
     " All plugins go below
 
-    " Autocomplete engine
-    " Plugin 'Valloric/YouCompleteMe'
+    " Autocompletion framework
+    Plugin 'shougo/deoplete.nvim'
+
+    " Linting
+    Plugin 'w0rp/ale'
+
+    " Python autocompletion for deoplete
+    Plugin 'deoplete-plugins/deoplete-jedi'
 
     " Plugin for syntax checking
-    Plugin 'scrooloose/syntastic'
+    " Plugin 'scrooloose/syntastic'
 
     " Fuzzy search engine
     Plugin 'kien/ctrlp.vim'
@@ -247,14 +264,17 @@
     " Plugin  for toggling comments
     Plugin 'scrooloose/nerdcommenter'
 
-    " Plugin for improved LaTeX
-    " Plugin 'lervag/vimtex'
+    " Nicer Python indentation
+    Plugin 'Vimjas/vim-python-pep8-indent'
 
     " Colorscheme settings
     Plugin 'joshdick/onedark.vim'
 
     " Plugin for closing parentheses
     Plugin 'jiangmiao/auto-pairs'
+
+    " Git integration
+    Plugin 'tpope/vim-fugitive'
 
     " Show git diff in gutter
     Plugin 'airblade/vim-gitgutter'
@@ -267,9 +287,6 @@
 
     " Supercollider plugin
     Plugin 'supercollider/scvim'
-
-    " Vimwiki
-    Plugin 'vimwiki/vimwiki'
 
     " Vue.js
     Plugin 'posva/vim-vue'
@@ -287,20 +304,21 @@
 " PLUGIN CONFIGURATION
     " Configure all installed plugins
 
-    " YouCompleteMe
-        " An autocompletion engine
+    " deoplete.nvim
+        " Enable it at startup
+        let g:deoplete#enable_at_startup = 1
 
-        " Ensures that the preview window goes away
-        let g:ycm_autoclose_preview_window_after_completion=1
+        " Remap the key-bindings
+        inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+        inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<Up>"
+        inoremap <expr><C-l> pumvisible() ? "\<C-y>" : "\<C-l>"
 
-        " Set interpreter to python2 interpreter
-        " let g:ycm_server_python_interpreter="/usr/bin/python2.7"
+        " Don't show function prototype
+        set completeopt-=preview
 
-        " Tell YCM where the global flag file is for C languages
-        " let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-        " Maps GoTo to leader + g
-        map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+    " ALE
+        " Enable only Flake8
+        let g:ale_linters = {'python': ['flake8', 'pylint']}
 
     " Syntastic
         " A plugin for linting different languages
@@ -328,6 +346,14 @@
 
         " Shortcut for closing error window
         map <leader>w :SyntasticReset<CR>
+
+        " Sets the height of the loclist window
+        " see :h syntastic-loclist-callback
+        function! SyntasticCheckHook(errors)
+            if !empty(a:errors)
+                let g:syntastic_loc_list_height = min([len(a:errors), 10])
+            endif
+        endfunction
 
     " NERDCommenter
             " A plugin for toggling comments
@@ -360,8 +386,3 @@
     " SCvim
         " Set terminal to gnome terminal
         let g:sclangTerm = "gnome-terminal -x $SHELL -ic"
-
-    " Vimwiki
-        " Set Markdown syntax highlighting as default
-        let g:vimwiki_list = [{'path': '~/vimwiki/',
-                   \ 'syntax': 'markdown', 'ext': '.md'}]
