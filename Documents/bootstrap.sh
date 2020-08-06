@@ -28,7 +28,7 @@ sudo pacman -S --noconfirm rofi >> setup.log
 sudo pacman -S --noconfirm arandr >> setup.log
 sudo pacman -S --noconfirm feh >> setup.log
 sudo pacman -S --noconfirm redshift >> setup.log
-sudo pacman -S --noconfirm scrot >> setup.log
+sudo pacman -S --noconfirm maim >> setup.log
 sudo pacman -S --noconfirm lxappearance >> setup.log
 sudo pacman -S --noconfirm arc-gtk-theme >> setup.log
 sudo pacman -S --noconfirm arc-icon-theme >> setup.log

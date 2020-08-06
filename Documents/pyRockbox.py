@@ -45,6 +45,7 @@ with open('./.scrobbler.log', newline='') as csvfile:
                 timestamp=timestamp,
                 album=row[1]
                 )
+        print('Scrobbled:', row[2])
 
 
 #34032 + 446 = 34478

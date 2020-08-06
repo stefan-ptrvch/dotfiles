@@ -1,50 +1,50 @@
-rename .gitignore
-rename babel.config.js
-rename cypress.json
-rename jest.config.js
-rename package.json
-rename postcss.config.js
-rename vue.config.js
-rename yarn.lock
-t
-rename drawer-backgound.jpg
-rename drawer-background.jpg
-terminal m
-ter
-search 
-rename .png
-rename local_development_architecture.png
-edit 
-term
-default_linemode 
-touch Map.vue
-rename IndexMap.vue
-touch
-rename About.vue
-mkdir web-ui
-mkdir backend
-mkdir nginx
-mkdir python
-touch app.py
-rename requirements.txt
-mkdir app
-mkdir new_proj
-search donw
-mkdir system_reinstall
-rename system_reinstal
-rename system_reinstall
-mkdir 
-mkdir temp
-
-del
-open_with nvim
-rename data_county
-rename data_a0
-rename europe.geojson
+rename Dockerfile_8.3
+rename Dockerfile
+open_with m
+de
+touch vue.config.js
+rename caribou
+q
+rename google_jobs_copy.csv
+search download
 open_with 
-rename data_europe
-mkdir data
-rename balkans.geojson
-terminal 
+touch clicks_update_script.py
+mkdir Tony Allen
+rename (2020) Rejoice
+rename Tony Allen & Hugh Masekala - Rejoice (2020) [WEB MP3 V0]
+rename (2014) Film of Life
+rename 
+mkdir Brian Eno
+rename (2017) Another Green World
+rename (1989) Apollo: Atmospheres & Soundtracks
+bulkrename 
+bulkrename
+search wodn
+rename test_projects
+default_linemode 
+ter
+rename unedited_projects.json
+touch .coveragerc
+open_with vim
+open_with nvim
+touch pre_deployment_script.py
+touch post_deployment_script.py
+rename [2020] Ghosts V  Together
+rename (2020) Ghosts V Together
+rename (2020) Ghosts VI Locusts
+teq
 search down
+search dowcu
+search docu
+search 
+term
+mkdir redis
+touch Dockerfile
+rename crawlers
+
+mkdir roboter
+rename nadjistan
+mkdir controller
+touch __init__.py
+terminal 
 delete 
