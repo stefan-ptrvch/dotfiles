@@ -383,6 +383,9 @@
         " Run in buffer mode by default
         let g:ctrlp_cmd = 'CtrlPBuffer'
 
+        " Ignore some folders
+        let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
     " SCvim
         " Set terminal to gnome terminal
         let g:sclangTerm = "gnome-terminal -x $SHELL -ic"
